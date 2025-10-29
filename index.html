@@ -1,90 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hasnain Edits | Luxury Portfolio</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hasnain Edits | Creative Video Editor</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
       scroll-behavior: smooth;
     }
 
     body {
-      background: #0e0e0e;
       color: white;
+      background-color: #0d0d0d;
     }
 
-    /* Header */
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 25px 60px;
-      background: rgba(0,0,0,0.8);
+    /* Background video */
+    #bg-video {
       position: fixed;
-      width: 100%;
       top: 0;
-      z-index: 100;
-      backdrop-filter: blur(6px);
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.35;
     }
 
-    .logo {
-      font-size: 26px;
-      letter-spacing: 1px;
-    }
-
-    .logo span {
-      color: #ffcc00;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 30px;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #ffcc00;
-    }
-
-    /* Hero Section */
-    .hero {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(to right, #000000, #1a1a1a);
+    header {
       text-align: center;
-      padding: 0 20px;
+      padding: 150px 20px 100px;
     }
 
-    .hero-content h2 {
-      font-size: 38px;
-      margin-bottom: 15px;
-      color: #ffcc00;
+    header h1 {
+      font-size: 3rem;
+      color: #f5f5f5;
+      letter-spacing: 2px;
+      text-shadow: 0 0 15px gold;
     }
 
-    .hero-content p {
-      max-width: 700px;
-      margin: 0 auto 25px;
-      font-size: 18px;
+    header p {
+      font-size: 1.2rem;
       color: #ddd;
+      margin: 15px 0 30px;
     }
 
     .btn {
-      background: #ffcc00;
-      color: black;
-      padding: 12px 28px;
+      background: gold;
+      color: #000;
+      padding: 12px 30px;
+      border: none;
       border-radius: 30px;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: bold;
       transition: 0.3s;
     }
 
@@ -93,137 +64,170 @@
       color: black;
     }
 
-    /* Portfolio Section */
-    .portfolio {
-      padding: 100px 60px;
+    section {
+      padding: 80px 20px;
       text-align: center;
+      background: rgba(0, 0, 0, 0.7);
+      margin-bottom: 50px;
     }
 
-    .portfolio h2 {
-      font-size: 30px;
-      color: #ffcc00;
-      margin-bottom: 40px;
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: gold;
     }
 
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 25px;
-    }
-
-    .video-grid iframe {
-      width: 100%;
-      height: 220px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
-    }
-
-    /* About Section */
-    .about {
-      padding: 100px 60px;
-      background: #111;
-      text-align: center;
-    }
-
-    .about h2 {
-      color: #ffcc00;
-      margin-bottom: 20px;
-      font-size: 30px;
-    }
-
-    .about p {
-      color: #ddd;
-      margin-bottom: 20px;
-      font-size: 17px;
+    p {
       max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto;
+      color: #ccc;
+      font-size: 1.1rem;
       line-height: 1.6;
     }
 
-    /* Contact Section */
-    .contact {
-      padding: 100px 60px;
-      text-align: center;
-      background: #000;
+    /* Tools */
+    .tools {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
     }
 
-    .contact h2 {
-      color: #ffcc00;
-      font-size: 30px;
-      margin-bottom: 20px;
+    .tool {
+      background: #1a1a1a;
+      padding: 25px;
+      border-radius: 15px;
+      transition: transform 0.3s;
     }
 
-    .contact p {
-      color: #ccc;
-      margin-bottom: 25px;
+    .tool:hover {
+      transform: translateY(-10px);
+      background: #262626;
+    }
+
+    .tool img {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+
+    /* Portfolio */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .portfolio-grid img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.4s;
+    }
+
+    .portfolio-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Contact */
+    .contact a {
+      color: gold;
+      text-decoration: none;
+      font-weight: bold;
     }
 
     footer {
-      background: #0b0b0b;
       text-align: center;
-      padding: 25px 10px;
-      color: #777;
-      font-size: 14px;
+      padding: 20px;
+      background: #111;
+      font-size: 0.9rem;
+      color: #999;
     }
   </style>
 </head>
 <body>
-  <header class="header">
-    <h1 class="logo">Hasnain <span>Edits</span></h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+
+  <!-- Background Video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="https://cdn.coverr.co/videos/coverr-golden-lights-1707/1080p.mp4" type="video/mp4">
+  </video>
+
+  <!-- Hero Section -->
+  <header>
+    <h1>Hi, I'm Hasnain Shah</h1>
+    <p>A Creative Video Editor — turning your ideas into cinematic visuals</p>
+    <a href="mailto:hassninshah36@gmail.com" class="btn">Hire Me</a>
   </header>
 
-  <!-- HERO SECTION -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h2>Cinematic Video Editor & Motion Designer</h2>
-      <p>I create visually stunning edits, motion graphics & color grading that make stories unforgettable.</p>
-      <a href="#portfolio" class="btn">View My Work</a>
-    </div>
-  </section>
-
-  <!-- PORTFOLIO SECTION -->
-  <section id="portfolio" class="portfolio">
-    <h2>My Latest Projects</h2>
-    <div class="video-grid">
-      <iframe src="https://www.youtube.com/embed/yourvideoid1" frameborder="0" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/yourvideoid2" frameborder="0" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/yourvideoid3" frameborder="0" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/yourvideoid4" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </section>
-
-  <!-- ABOUT SECTION -->
-  <section id="about" class="about">
+  <!-- About Section -->
+  <section id="about">
     <h2>About Me</h2>
     <p>
-      I'm <strong>Hasnain</strong>, a passionate <strong>Video Editor & Motion Designer</strong> with a focus on cinematic visuals and storytelling.
-      From smooth transitions to impactful color grading — I make every frame count.
-    </p>
-    <p>
-      I can edit all types of videos: cinematic, vlog, commercial, promotional, gaming, or social media reels — exactly how you imagine.
-    </p>
-    <p>
-      Let's bring your vision to life with professional precision and creative excellence.
+      I’m a passionate video editor who loves creating visually stunning edits. Whether it’s cinematic storytelling,
+      YouTube vlogs, short ads, or social media edits — I bring creativity and precision to every project. My goal is to
+      make every video not just seen, but remembered.
     </p>
   </section>
 
-  <!-- CONTACT SECTION -->
+  <!-- Tools Section -->
+  <section id="tools">
+    <h2>Tools I Use</h2>
+    <div class="tools">
+      <div class="tool">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg" alt="After Effects">
+        <h3>After Effects</h3>
+        <p>Motion graphics & cinematic VFX</p>
+      </div>
+      <div class="tool">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/DaVinci_Resolve_17_logo.svg" alt="DaVinci Resolve">
+        <h3>DaVinci Resolve</h3>
+        <p>Professional color grading & editing</p>
+      </div>
+      <div class="tool">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Kdenlive_logo_2020.svg" alt="Kdenlive">
+        <h3>Kdenlive</h3>
+        <p>Fast & flexible video editing</p>
+      </div>
+      <div class="tool">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/CapCut_Logo.svg" alt="CapCut">
+        <h3>CapCut</h3>
+        <p>Quick edits for social media</p>
+      </div>
+      <div class="tool">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg" alt="Premiere Pro">
+        <h3>Premiere Pro</h3>
+        <p>Timeline-based professional editing</p>
+      </div>
+      <div class="tool">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Audacity_Logo.svg" alt="Audacity">
+        <h3>Audacity</h3>
+        <p>Clean & enhance audio professionally</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2>My Work</h2>
+    <div class="portfolio-grid">
+      <img src="https://picsum.photos/400/250?random=1" alt="Project 1">
+      <img src="https://picsum.photos/400/250?random=2" alt="Project 2">
+      <img src="https://picsum.photos/400/250?random=3" alt="Project 3">
+      <img src="https://picsum.photos/400/250?random=4" alt="Project 4">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
   <section id="contact" class="contact">
     <h2>Contact Me</h2>
-    <p>Let’s collaborate! Message me for freelance or project work.</p>
-    <a href="mailto:hasnainedits@gmail.com" class="btn">Hire Me</a>
+    <p>
+      Let’s create something amazing together.  
+      Reach me at <a href="mailto:hassninshah36@gmail.com">hassninshah36@gmail.com</a>
+    </p>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <p>© 2025 Hasnain Edits | All Rights Reserved</p>
+    © 2025 Hasnain Shah — All Rights Reserved
   </footer>
+
 </body>
 </html>
