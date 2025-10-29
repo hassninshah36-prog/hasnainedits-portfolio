@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hasnain Edits | Luxury Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #0b0b0b, #000);
+      color: #fff;
+    }
+
+    /* HEADER */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(6px);
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .logo span {
+      color: #ffcc00;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 0 20px;
+      background: url('https://cdn.coverr.co/videos/coverr-aurora-borealis-2470/1080p.mp4') no-repeat center center/cover;
+    }
+
+    .hero-content {
+      background: rgba(0, 0, 0, 0.65);
+      padding: 40px 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(255, 204, 0, 0.15);
+    }
+
+    .hero-content h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      color: #ffcc00;
+    }
+
+    .hero-content p {
+      color: #ddd;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+      font-size: 18px;
+    }
+
+    .btn {
+      background: #ffcc00;
+      color: #000;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* PORTFOLIO */
+    .portfolio {
+      padding: 100px 60px;
+      text-align: center;
+    }
+
+    .portfolio h2 {
+      color: #ffcc00;
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+    }
+
+    .video-grid iframe {
+      width: 100%;
+      height: 220px;
+      border-radius: 12px;
+      border: 2px solid rgba(255, 204, 0, 0.2);
+      transition: 0.4s;
+    }
+
+    .video-grid iframe:hover {
+      transform: scale(1.03);
+      border-color: #ffcc00;
+      box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
+    }
+
+    /* ABOUT */
+    .about {
+      padding: 100px 60px;
+      background: linear-gradient(to right, #111, #0a0a0a);
+      text-align: center;
+    }
+
+    .about h2 {
+      color: #ffcc00;
+      margin-bottom: 25px;
+      font-size: 32px;
+    }
+
+    .about p {
+      color: #ccc;
+      max-width: 850px;
+      margin: 0 auto 20px;
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    /* TOOLS SECTION */
+    .tools {
+      background: #0b0b0b;
+      padding: 100px 60px;
+      text-align: center;
+    }
+
+    .tools h2 {
+      color: #ffcc00;
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 40px;
+      justify-items: center;
+    }
+
+    .tool {
+      background: #111;
+      padding: 25px 20px;
+      border-radius: 12px;
+      transition: 0.4s;
+      box-shadow: 0 0 12px rgba(255, 204, 0, 0.05);
+    }
+
+    .tool:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 20px rgba(255, 204, 0, 0.25);
+    }
+
+    .tool img {
+      width: 60px;
+      margin-bottom: 12px;
+    }
+
+    .tool h3 {
+      color: #ffcc00;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .tool p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    /* CONTACT */
+    .contact {
+      padding: 100px 60px;
+      background: #000;
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: #ffcc00;
+      margin-bottom: 25px;
+      font-size: 30px;
+    }
+
+    .contact p {
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      background: #0a0a0a;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">Hasnain <span>Edits</span></h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#tools">Tools</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Luxury Cinematic Video Editor</h2>
+      <p>I create cinematic visuals, smooth transitions, and color-rich storytelling that make your brand stand out.</p>
+      <a href="#portfolio" class="btn">Explore My Work</a>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="portfolio">
+    <h2>Featured Projects</h2>
+    <div class="video-grid">
+      <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/XHOmBV4js_E" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I'm <strong>Hasnain Shah</strong> — a passionate <strong>Video Editor & Motion Designer</strong> who brings cinematic storytelling to life. I specialize in crafting videos that connect emotionally and visually.</p>
+    <p>I can edit all types of videos — from cinematic films, YouTube content, gaming edits, reels, to brand commercials — exactly how clients imagine.</p>
+  </section>
+
+  <!-- TOOLS -->
+  <section id="tools" class="tools">
+    <h2>Tools I Work With</h2>
+    <div class="tool-grid">
+      <div class="tool">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg">
+        <h3>After Effects</h3>
+        <p>Motion Graphics & VFX</p>
+      </div>
+      <div class="tool">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg">
+        <h3>Premiere Pro</h3>
+        <p>Professional Video Editing</p>
+      </div>
+      <div class="tool">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Kdenlive_logo_2020.svg">
+        <h3>Kdenlive</h3>
+        <p>Efficient Open Source Editing</p>
+      </div>
+      <div class="tool">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/DaVinci_Resolve_17_logo.svg">
+        <h3>DaVinci Resolve</h3>
+        <p>Color Grading & Finishing</p>
+      </div>
+      <div class="tool">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/CapCut_Logo.svg">
+        <h3>CapCut</h3>
+        <p>Quick Mobile Editing</p>
+      </div>
+      <div class="tool">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Audacity_Logo.svg">
+        <h3>Audacity</h3>
+        <p>Audio Cleanup & Mixing</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Let's collaborate and bring your vision to life!</p>
+    <a href="mailto:hassninshah36@gmail.com" class="btn">Hire Me</a>
+  </section>
+
+  <footer>© 2025 Hasnain Edits | All Rights Reserved</footer>
+</body>
+</html>
